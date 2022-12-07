@@ -1,0 +1,1 @@
+# magic.collection-registry.frontend
