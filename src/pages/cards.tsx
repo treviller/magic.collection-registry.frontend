@@ -20,7 +20,7 @@ const fetcher: Fetcher<Array<CardData>, string> = (url) => fetch(url)
 export default function Cards() {
     const searchTerm = useSelector(selectSearchState)
 
-    const { data, error, isLoading } = useSWR('http://localhost:8080/api/cards?name='+searchTerm+'&language=fr', fetcher);
+    const { data, error, isLoading } = useSWR(process.env.NEXT_PUBLIC_API_BASE_URL+'/cards?name='+searchTerm+'&language=fr', fetcher);
 
     if(isLoading) {
         return <p>Loading...</p>
