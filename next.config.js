@@ -10,6 +10,10 @@ const nextConfig = {
         pathname: '**',
       },
     ]
+  },
+  i18n: {
+    locales: ['fr', 'en'],
+    defaultLocale: 'fr'
   }
 }
 

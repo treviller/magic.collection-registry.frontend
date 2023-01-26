@@ -1,0 +1,10 @@
+{
+  "error.no_cards_found": "No cards found.",
+  "error.internal_error": "Oops, an error occurred.",
+  "header.home": "Home",
+  "header.all_cards": "All cards",
+  "header.my_collection": "My collection",
+  "header.account": "Account",
+  "header.search_something": "Search something...",
+  "state.loading": "Loading..."
+}

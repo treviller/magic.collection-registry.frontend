@@ -1,0 +1,10 @@
+{
+  "error.no_cards_found": "Aucune carte trouvée.",
+  "error.internal_error": "Oups, une erreur est survenue.",
+  "header.home": "Accueil",
+  "header.all_cards": "Cartes",
+  "header.my_collection": "Ma collection",
+  "header.account": "Compte",
+  "header.search_something": "Chercher quelque chose...",
+  "state.loading": "Chargement..."
+}

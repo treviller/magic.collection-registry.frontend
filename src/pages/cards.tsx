@@ -3,6 +3,8 @@ import useSWR, {Fetcher} from "swr";
 import React from "react";
 import {useSelector} from "react-redux";
 import {selectSearchState} from "@/store/searchSlice";
+import {useRouter} from "next/router";
+import {FormattedMessage} from "react-intl";
 
 type CardsListResponse = {
     meta: string[],
@@ -14,24 +16,29 @@ type Props = {
 }
 
 const fetcher: Fetcher<Array<CardData>, string> = (url) => fetch(url)
-    .then((response)=> response.json())
+    .then((response) => response.json())
     .then((responseData: CardsListResponse) => responseData.data);
 
 export default function Cards() {
+    const {locale} = useRouter()
     const searchTerm = useSelector(selectSearchState)
 
-    const { data, error, isLoading } = useSWR(process.env.NEXT_PUBLIC_API_BASE_URL+'/cards?name='+searchTerm+'&language=fr', fetcher);
+    const {
+        data,
+        error,
+        isLoading
+    } = useSWR(process.env.NEXT_PUBLIC_API_BASE_URL + '/cards?name=' + searchTerm + '&language=' + locale, fetcher);
 
-    if(isLoading) {
-        return <p>Loading...</p>
+    if (isLoading) {
+        return <p><FormattedMessage id="state.loading"/></p>
     }
 
-    if(!data) {
-        return <p>No cards found</p>
+    if (!data) {
+        return <p><FormattedMessage id="error.no_cards_found"/></p>
     }
 
-    if(error) {
-        return <p>Oups, an error occurred</p>
+    if (error) {
+        return <p><FormattedMessage id="error.internal_error"/></p>
     }
 
     return (
