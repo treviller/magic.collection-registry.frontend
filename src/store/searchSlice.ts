@@ -3,7 +3,7 @@ import {HYDRATE} from "next-redux-wrapper";
 import {AppState} from "@/store/store";
 
 export interface SearchState {
-    term: String|null
+    term: string | null
 }
 
 const initialState: SearchState = {
@@ -15,7 +15,8 @@ export const searchSlice = createSlice({
     initialState,
     reducers: {
         setSearchTerm(state, action) {
-            return action.payload
+            state.term = action.payload
+            return state
         }
     },
     extraReducers: (builder) => {
