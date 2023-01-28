@@ -8,7 +8,10 @@ import {IntlProvider} from "react-intl";
 import fr from '../lang/fr.json';
 import en from '../lang/en.json';
 import {useRouter} from "next/router";
+import {config} from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
+config.autoAddCss = false
 
 const messages: Record<string, Record<string, string>> = {
     en,
