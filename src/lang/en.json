@@ -4,7 +4,7 @@
   "header.home": "Home",
   "header.all_cards": "All cards",
   "header.my_collection": "My collection",
-  "header.account": "Account",
+  "header.account": "Login",
   "header.search_something": "Search something...",
   "state.loading": "Loading..."
 }

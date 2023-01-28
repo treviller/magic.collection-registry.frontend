@@ -14,7 +14,7 @@ export default function SearchBar() {
 
     return (
         <input
-            className="flex-1 bg-blue-600 text-white placeholder:text-white rounded-3xl p-2 m-2 text-right focus-visible:border-2 focus-visible:border-red-900"
+            className="hidden lg:block flex-1 bg-blue-600 text-white placeholder:text-white rounded-3xl p-2 m-2 text-right focus-visible:border-2 focus-visible:border-red-900"
             type="text"
             placeholder={intl.formatMessage({id: 'header.search_something'})}
             onChange={debouncedEventHandler}
