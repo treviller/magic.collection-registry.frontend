@@ -6,7 +6,7 @@ export default function Layout({children}: ScriptProps) {
     return (
         <>
             <Header/>
-            <main className="flex flex-col container mx-auto">{children}</main>
+            <main className="flex flex-col container mx-auto min-h-90v">{children}</main>
             <Footer/>
         </>
     )
