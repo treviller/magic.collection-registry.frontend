@@ -1,4 +1,5 @@
 {
+  "cards.search_result_stats": "{cardsCount} cartes trouvées (page {pageIndex})",
   "error.no_cards_found": "Aucune carte trouvée.",
   "error.internal_error": "Oups, une erreur est survenue.",
   "header.home": "Accueil",

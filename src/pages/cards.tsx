@@ -67,6 +67,13 @@ export default function Cards() {
 
     return (
         <>
+            <span className="m-3">
+                <FormattedMessage id="cards.search_result_stats"
+                                  values={{
+                                      cardsCount: data.meta.total,
+                                      pageIndex
+                                  }}/>
+            </span>
             <div className="flex flex-row flex-wrap justify-between w-100% after:flex-auto">
                 {data.data.map((card, i) => <Card data={card} key={i}/>)}
             </div>
