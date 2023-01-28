@@ -67,7 +67,7 @@ export default function Cards() {
 
     return (
         <>
-            <div className="flex flex-row flex-wrap justify-between w-100%">
+            <div className="flex flex-row flex-wrap justify-between w-100% after:flex-auto">
                 {data.data.map((card, i) => <Card data={card} key={i}/>)}
             </div>
             <Pagination previousPageIndex={data.meta.previous_page} nextPageIndex={data.meta.next_page}
